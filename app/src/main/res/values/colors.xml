@@ -3,4 +3,43 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <color name="colorOrange">#FFCCBC</color>
+    <color name="pop">#FF9800</color>
+    <color name="white">#000</color>
+    <color name="negro">#000</color>
+    <color name="blanco">#CE93D8</color>
+    <color name="colorNaranjaClaro">#E0F7FA</color>
+
+    <color name="bg_login">#26ae90</color>
+    <color name="md_orange_500">#FF9800</color>
+    <color name="md_deep_orange_100">#FFCCBC</color>
+    <color name="md_green_A100">#B9F6CA</color>
+    <color name="md_purple_200">#CE93D8</color>
+    <color name="md_red_100">#FFCDD2</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="backgroundcolor">#fcfcfc</color>
+    <color name="lightgray">#ededed</color>
+    <color name="deeppurple">#7c4cff</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#00bfa5</color>
+    <color name="bg_main">#ff0206</color>
+
+    <color name="input_login">#222222</color>
+
+    <color name="input_login_hint">#999999</color>
+
+    <color name="input_register">#888888</color>
+
+    <color name="input_register_bg">#3b4148</color>
+
+    <color name="input_register_hint">#5e6266</color>
+
+    <color name="btn_login">#26ae90</color>
+
+    <color name="btn_login_bg">#eceef1</color>
+
+    <color name="lbl_name">#333333</color>
+
+    <color name="btn_logut_bg">#ff6861</color>
 </resources>

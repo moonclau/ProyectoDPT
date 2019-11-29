@@ -1,3 +1,103 @@
 <resources>
     <string name="app_name">ProyectoDPT</string>
+    <string name="nuevo">Nuevo Evento</string>
+    <string name="listar">Listar</string>
+    <string name="buscar">Buscar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="modificar">Modificar</string>
+    <string name="camara">Cámara</string>
+    <string name="salir">Salir</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="ingresaID">Ingresar ID</string>
+    <string name="ingresaNombre">Descripción del asunto</string>
+    <string name="ingresaOrg">Tipo asunto</string>
+    <string name="ingresaCumple">Fecha del evento</string>
+    <string name="eligeSexo">Importancia</string>
+    <string name="eligeMasculino">Emergencia</string>
+    <string name="ingresaTelefono">Número teléfonico</string>
+
+    <string name="regisytrar">Registrar</string>
+    <string name="fechabtn">Elige fecha</string>
+    <string name="btnBuscar">Buscar</string>
+    <string name="btnLimpiar">Limpiar</string>
+    <string name="title_activity_loginn">Login</string>
+    <string name="enter_email">Correo</string>
+    <string name="enter_password">Contraseña</string>
+    <string name="rep_password">Repite contraseña</string>
+    <string name="registrar">Registrar</string>
+    <string name="action_sign_in_short">Registrar</string>
+    <string name="email">Correo</string>
+    <string name="btnfoto">Tomar foto</string>
+    <string name="minimum_password">Contraseña muy pequeña, Debe tener minimo 6 caracteres!</string>
+    <string name="btngaleria">Agregar foto de galeria</string>
+    <string name="auth_failed">La Autentificacion fallo, verifica tu correo y contraseña </string>
+    <string name="change_email">Cambiar correo</string>
+    <string name="change_password">Cambiar contraseña</string>
+    <string name="send_password_reset_email">Enviar contraseña restablecer correo</string>
+    <string name="remove_user">Eliminar usuario</string>
+    <string name="new_pass">Nueva contraseña</string>
+    <string name="title_activity_profile">Firebase</string>
+
+    <string name="hint_email">Correo</string>
+
+    <string name="hint_password">Contraseña</string>
+
+    <string name="hint_name">Alias</string>
+    <string name="btn_login">LOGIN</string>
+
+    <string name="btn_link_to_register">¿No es un miembro? ¡Regístrate aqui!</string>
+
+    <string name="btn_link_to_login">Ya tengo una cuenta. Iniciar Sesion!</string>
+
+    <string name="title_activity_reset_password">Restablecer contraseña</string>
+
+    <string name="btn_forgot_password">¿Olvido su contraseña?</string>
+
+    <string name="btn_reset_password">Eliminar contraseña</string>
+
+
+    <string name="btn_back"><![CDATA[<< Back]]></string>
+    <string name="hint_new_email">Nuevo correo</string>
+
+    <string name="btn_change">Cambio</string>
+
+    <string name="btn_send">Enviar</string>
+
+    <string name="btn_remove">Eliminar</string>
+
+    <string name="btn_sign_out">Desconectar</string>
+
+    <string name="lbl_forgot_password">¿Olvido su contrasena?</string>
+
+    <string name="forgot_password_msg">Solo necesitamos su correo electrónico registrada para enviarle las instrucciones para restablecer su contraseña.</string>
+    <string name="title_activity_resetar_contrasenia">ResetarContrasenia</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="prnom">Nombre</string>
+    <string name="prape">Apellido</string>
+    <string name="prnomp">Nombre de la persona de confianza</string>
+    <string name="prnum">Numero de la persona de confianza</string>
+    <string name="prterminos">Acepto terminos y condiciones de uso</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Bienvenido</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_tools">Tools</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+
 </resources>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="857a2828-f194-4f66-8b92-1aaa111435cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/codeStyles/Project.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/Login.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/Perfil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/Registro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/clases/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/gallery/GalleryFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/gallery/GalleryViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/home/HomeFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/home/HomeViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/send/SendFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/send/SendViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/share/ShareFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/share/ShareViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/slideshow/SlideshowFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/slideshow/SlideshowViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/tools/ToolsFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/ui/tools/ToolsViewModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-v21/btn_uno.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-v21/ic_menu_camera.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-v21/ic_menu_gallery.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-v21/ic_menu_manage.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-v21/ic_menu_send.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-v21/ic_menu_share.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-v21/ic_menu_slideshow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../drawable-v24/fon.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bg_ripple.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btn_uno.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/btn_uno_txt.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/f.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fondo.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fondo1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fondo2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_add_a_photo_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_account_circle_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_add_circle_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_calendar_today_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_create_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_delete_sweep_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_exit_to_app_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_format_list_bulleted_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_group_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_navigate_next_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_phone_in_talk_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_baseline_search_24px.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_dehaze_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_event_note_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_group_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_linked_camera_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ic_photo_library_black_24dp.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/side_nav_bar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_login.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_perfil.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/activity_registro.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/app_bar_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/content_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/fragment_gallery.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/fragment_send.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/fragment_share.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/fragment_slideshow.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/fragment_tools.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../layout/nav_header_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../menu/activity_menu_drawer.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../menu/menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../navigation/mobile_navigation.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values-v21/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values/dimens.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../values/drawables.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../java/com/example/proyectodpt/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../java/com/example/proyectodpt/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../values/styles.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../build.gradle" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="615" />
+    <option name="height" value="735" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="drawable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="drawable" type="b2602c69:ProjectViewProjectNode" />
+              <item name="drawable" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Android_Firebase1-master" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="857a2828-f194-4f66-8b92-1aaa111435cb" name="Default Changelist" comment="" />
+      <created>1574667256191</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574667256191</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Capture Tool" />
+      <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.3296131" />
+      <window_info id="Structure" side_tool="true" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="Resources Explorer" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info id="Captures" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Palette&#9;" />
+    </layout>
+  </component>
+</project>

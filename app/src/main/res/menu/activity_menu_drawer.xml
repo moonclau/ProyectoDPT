@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_nuevo"
+            android:icon="@drawable/ic_baseline_add_circle_24px"
+            android:title="@string/nuevo" />
+        <item
+            android:id="@+id/nav_listar"
+            android:icon="@drawable/ic_baseline_format_list_bulleted_24px"
+            android:title="@string/listar" />
+        <item
+            android:id="@+id/nav_buscar"
+            android:icon="@drawable/ic_baseline_search_24px"
+            android:title="@string/buscar" />
+        <item
+            android:id="@+id/nav_eliminar"
+            android:icon="@drawable/ic_baseline_delete_sweep_24px"
+            android:title="@string/eliminar" />
+        <item
+            android:id="@+id/nav_modificar"
+            android:icon="@drawable/ic_baseline_create_24px"
+            android:title="@string/modificar" />
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="@drawable/ic_baseline_exit_to_app_24px"
+            android:title="@string/salir" />
+    </group>
+
+</menu>
