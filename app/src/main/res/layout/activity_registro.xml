@@ -43,11 +43,25 @@
                     android:textSize="18sp" />
 
                 <EditText
-                    android:id="@+id/usu"
+                    android:id="@+id/nombre"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:focusableInTouchMode="true"
-                    android:hint="@string/hint_name"
+                    android:hint="@string/prnom"
+                    android:imeActionId="@+id/login"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="#CCADAD"
+                    tools:ignore="InvalidImeActionId" />
+
+                <EditText
+                    android:id="@+id/apellido"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/ape"
                     android:imeActionId="@+id/login"
                     android:imeOptions="actionUnspecified"
                     android:inputType="text"
@@ -80,20 +94,6 @@
                     android:maxLines="1"
                     android:singleLine="true"
                     android:textColor="#FDFAFA"
-                    tools:ignore="InvalidImeActionId" />
-
-                <EditText
-                    android:id="@+id/nombre"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:focusableInTouchMode="true"
-                    android:hint="@string/prnom"
-                    android:imeActionId="@+id/login"
-                    android:imeOptions="actionUnspecified"
-                    android:inputType="text"
-                    android:maxLines="1"
-                    android:singleLine="true"
-                    android:textColor="#CCADAD"
                     tools:ignore="InvalidImeActionId" />
 
                 <EditText

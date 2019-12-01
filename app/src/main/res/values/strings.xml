@@ -45,7 +45,7 @@
 
     <string name="hint_password">Contraseña</string>
 
-    <string name="hint_name">Alias</string>
+    <string name="ape">Primer Apellido</string>
     <string name="btn_login">LOGIN</string>
 
     <string name="btn_link_to_register">¿No es un miembro? ¡Regístrate aqui!</string>

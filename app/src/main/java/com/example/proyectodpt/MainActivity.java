@@ -11,6 +11,7 @@ import android.telephony.SmsManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.proyectodpt.clases.Usuario;
@@ -26,14 +27,117 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
+import org.w3c.dom.Text;
+
 import java.security.Principal;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnperfil, btnmsm,btnlogout;
+    Button btnperfil, btnmsm, btnlogout;
+    private DatabaseReference bbdd;
+    Usuario users;
+    TextView nomText;
+    String idd;
+    String correo, nombre, nombrePersona, numeroPersona;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        btnperfil = (Button) findViewById(R.id.btnperfil);
+        btnmsm = (Button) findViewById(R.id.btnmsm);
+        btnlogout = (Button) findViewById(R.id.btnlogout);
+        nomText = (TextView) findViewById(R.id.nombre);
+        bbdd = FirebaseDatabase.getInstance().getReference("Usuarios");
+        final FirebaseUser authd = FirebaseAuth.getInstance().getCurrentUser();
+        final String[] usuario= new String[4];
+        //obtenemos el id de firebase para buscar los datos
+        if (authd != null) {
+            correo = authd.getEmail();
+            idd = authd.getUid();
+            bbdd.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    usuario[0] = dataSnapshot.child(idd).child("nombre").getValue().toString();
+                    usuario[1] = dataSnapshot.child(idd).child("numeroPersona").getValue().toString();
+                    usuario[2] = dataSnapshot.child(idd).child("nombrePersona").getValue().toString();
+                    usuario[3] = dataSnapshot.child(idd).child("apellido").getValue().toString();
+                    Log.d( "Value is: " , usuario[0]+usuario[1]);
+
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+        //metodo del boton ir a perfil
+        btnperfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, Perfil.class));
+            }
+        });
+        //Manda msm
+        if (ActivityCompat.checkSelfPermission(
+                MainActivity.this, Manifest.permission.SEND_SMS)
+                != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                MainActivity.this, Manifest
+                        .permission.SEND_SMS) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]
+                    {Manifest.permission.SEND_SMS,}, 1000);
+        } else {
+
+
+            btnmsm.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    //Log.i("nombre:",""+usuario[1]);
+                        String tel=usuario[1].trim();
+                    enviarMensaje(tel,"Saludos "+usuario[2]+"su conocido "+usuario[0]+" "+usuario[3]+" no esta en condiciones favor de contactarlo");
+
+
+                }
+            });
+        }
+        //boton cerrrar sesion
+        btnlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                signOut();
+            }
+        });
+
+    }
+
+    //metodo de cerrar sesion
+    private void signOut() {
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        auth.signOut();
+        startActivity(new Intent(MainActivity.this, Login.class));
+        finish();
+    }
+// mandar mensaje metodo
+private void enviarMensaje (String numero, String mensaje){
+    try {
+        SmsManager sms = SmsManager.getDefault();
+         sms.sendTextMessage(numero,null,mensaje,null,null);
+        Toast.makeText(getApplicationContext(), "Mensaje Enviado.", Toast.LENGTH_LONG).show();
+    }
+    catch (Exception e) {
+        Toast.makeText(getApplicationContext(), "Mensaje no enviado, datos incorrectos.", Toast.LENGTH_LONG).show();
+        e.printStackTrace();
+    }
+}
+
+}
+
+    /*Button btnperfil, btnmsm,btnlogout;
     DatabaseReference mRootReference;
+    TextView nomText;
     Usuario users;
     private FirebaseAuth.AuthStateListener authListener;
     private FirebaseAuth auth;
+    String correo,nombre,nombrePersona,numeroPersona;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,18 +145,16 @@ public class MainActivity extends AppCompatActivity {
         btnperfil = (Button) findViewById(R.id.btnperfil);
         btnmsm = (Button) findViewById(R.id.btnmsm);
         btnlogout=(Button) findViewById(R.id.btnlogout);
-        mRootReference = FirebaseDatabase.getInstance().getReference();
+        nomText=(TextView) findViewById(R.id.nombre);
+        mRootReference = FirebaseDatabase.getInstance().getReference("Usuarios");
         auth = FirebaseAuth.getInstance();
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        if (user != null) {
-            String email = user.getEmail();
-
-            solicitarDatosFirebase(email);
+        /* obtenemos los datos de firebase*/
+      /*  final FirebaseUser authd = FirebaseAuth.getInstance().getCurrentUser();
+        if (authd != null) {
+            correo = authd.getEmail();
+            String idd = authd.getUid();
+            solicitarDatosFirebase(idd);
         }
-        //Recibe valor.
-
-
-
         btnperfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -74,6 +176,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     //enviarMensaje(users.getNumeroPersona(),"Saludos "+users.getNombrePersona()+"su conocido "+users.getNombre()+"no esta en condiciones favor de ");
+                //    Log.i("nombre:",""+numeroPersona);
                 enviarMensaje(users.getNumeroPersona(),"Buen dia");
                 }
             });
@@ -84,7 +187,20 @@ public class MainActivity extends AppCompatActivity {
                 signOut();
             }
         });
+    }
+    private void solicitarDatosFirebase(final String idd) {
+        mRootReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String nombre= dataSnapshot.child(idd).child("nombre").getValue().toString();
+                mText.setText(nombre);
 
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
 
     }
     private void signOut() {
@@ -93,76 +209,11 @@ public class MainActivity extends AppCompatActivity {
         finish();
     }
 
-    private void solicitarDatosFirebase(final String email) {
-
-
-                Query q=mRootReference.orderByChild("email").equalTo(email);
-                q.addListenerForSingleValueEvent(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        int cont=0;
-                        for(DataSnapshot datasnapshot: dataSnapshot.getChildren()){
-                            cont++;
-
-                            users= datasnapshot.getValue(Usuario.class);
-                            String nombre = users.getNombre();
-                            String nombrePersona = users.getNombrePersona();
-                            String numeroPersona = users.getNumeroPersona();
-                            users=new Usuario(nombre,email,nombrePersona,numeroPersona);
-                            Log.e("nombre:",""+nombre);
-                            Log.e("nombrePersona:",""+nombrePersona);
-                            Log.e("numeroPersona:",""+numeroPersona);
-
-
-                            Toast.makeText(MainActivity.this, "He encontrado "+cont, Toast.LENGTH_LONG).show();
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
-                });
-
-
-        /*mRootReference.child("Usuarios").addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-
-                for(final DataSnapshot snapshot : dataSnapshot.getChildren()){
-
-                    mRootReference.child("Usuarios").child(snapshot.getKey()).addValueEventListener(new ValueEventListener() {
-                        @Override
-                        public void onDataChange(DataSnapshot dataSnapshot) {
-                            user= snapshot.getValue(Usuario.class);
-                            String nombre = user.getName();
-                            String nombrep = user.getNomp();
-                            int telefono = Integer.parseInt(user.getNump());
-
-                            Log.e("NombreUsuario:",""+nombre);
-                            Log.e("NombrePersona:",""+nombrep);
-                            Log.e("TelefonoPersona:",""+telefono);
-                            Log.e("Datos:",""+snapshot.getValue());
-                        }
-
-                        @Override
-                        public void onCancelled(DatabaseError databaseError) {
-
-                        }
-                    });
-                }
-            }
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });*/
-    }
 
     private void enviarMensaje (String numero, String mensaje){
         try {
             SmsManager sms = SmsManager.getDefault();
-            sms.sendTextMessage(numero,null,mensaje,null,null);
+           // sms.sendTextMessage(numero,null,mensaje,null,null);
             Toast.makeText(getApplicationContext(), "Mensaje Enviado.", Toast.LENGTH_LONG).show();
         }
         catch (Exception e) {
@@ -173,3 +224,5 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+       */
