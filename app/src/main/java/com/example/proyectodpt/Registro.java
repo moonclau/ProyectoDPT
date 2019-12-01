@@ -27,7 +27,7 @@ import java.util.Map;
 
 public class Registro extends AppCompatActivity {
     private EditText inputEmail, inputPassword,nombre,nombrep,nump,ape;
-    private Button btnSignIn, btnSignUp, btnResetPassword;
+    private Button btnSignIn, btnSignUp, btnResetPassword,btnterminos;
     private ProgressBar progressBar;
     private FirebaseAuth auth;
     private DatabaseReference mrefin;
@@ -50,12 +50,19 @@ public class Registro extends AppCompatActivity {
         nombrep=(EditText) findViewById(R.id.nomper);
         nump=(EditText) findViewById(R.id.numper);
         ape=(EditText) findViewById(R.id.apellido);
-
-
+        btnterminos=(Button)findViewById(R.id.terminos);
+//boton de terminos y condiciones
+        btnterminos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Registro.this, terminos.class));
+            }
+        });
+//boton resetear contrasenia
         btnResetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               // startActivity(new Intent(Registro.this, ResetarContrasenia.class));
+                startActivity(new Intent(Registro.this, ResetarContrasenia.class));
             }
         });
 
@@ -64,6 +71,12 @@ public class Registro extends AppCompatActivity {
             public void onClick(View v) {
 
                 startActivity(new Intent(Registro.this, Login.class));
+            }
+        });
+        btnResetPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Registro.this, ResetarContrasenia.class));
             }
         });
 /*registrarse boton */
