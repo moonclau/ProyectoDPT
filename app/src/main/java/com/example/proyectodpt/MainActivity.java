@@ -1,8 +1,16 @@
 package com.example.proyectodpt;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
+import android.location.Location;
+import android.location.LocationListener;
+import android.location.LocationManager;
+import android.location.LocationProvider;
+import android.provider.Settings;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -29,7 +37,10 @@ import com.google.firebase.database.ValueEventListener;
 
 import org.w3c.dom.Text;
 
+import java.io.IOException;
 import java.security.Principal;
+import java.util.List;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     TextView nomusuario, txtestado;
@@ -93,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                         /***************************************/
+                        /*******************************************MANDAR UBICACION***************************************/
+
 
 
                     }
@@ -118,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         btngps.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //  startActivity(new Intent( MainActivity.this,GPS.class));
+                  startActivity(new Intent( MainActivity.this,Activity_gps.class));
             }
         });
         //metodo del boton ir a pagina sensor
@@ -160,5 +173,8 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+/************************************************************************************************************************/
+
+/************************************************************************************************************************/
 
 }
